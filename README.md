@@ -12,6 +12,9 @@ $ catkin_make
  * make new src folder */
 $ cd catkin_ws
 $ mkdir src_new
+$ cd src_new
+$ git clone https://github.com/MiSeon23/rplidar_drone_blocking
+$ cd ..
 $ catkin_make --source src_new
 $ cd build
 $ make -j4
