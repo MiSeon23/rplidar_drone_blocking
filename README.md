@@ -17,9 +17,16 @@ $ cd build
 $ make -j4
 ```
 
-How to run (for rplidar a1)
+How to run
 ```
-$ roslaunch rplidar_ros rplidar.launch
+//check the authority of rplidar's serial-port
+$ ls -l /dev |grep ttyUSB
+
+//add the authority of write (such as /dev/ttyUSB0)
+$ sudo chmod 666 /dev/ttyUSB0
+
+$ roslaunch rplidar_ros rplidar.launch (a1)
+$ roslaunch rplidar_ros rplidar_s1.launch (s1)
 
 $ rosrun rplidar_ros rplidarNodeClient
 
