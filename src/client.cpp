@@ -37,11 +37,11 @@
 
 #include "ros/ros.h"
 #include "sensor_msgs/LaserScan.h"
-#include "rplidar_ros/new_rplidar.h"
+#include "rplidar_ros_blocking/new_rplidar.h"
 
 #define RAD2DEG(x) ((x)*180./M_PI)
 
-rplidar_ros::new_rplidar msg;
+rplidar_ros_blocking::new_rplidar msg;
 
 void scanCallback(const sensor_msgs::LaserScan::ConstPtr& scan)
 {
@@ -76,7 +76,7 @@ int main(int argc, char **argv)
     ros::init(argc, argv, "rplidar_node_client");
     ros::NodeHandle n;
 
-    ros::Publisher pub = n.advertise<rplidar_ros::new_rplidar>("new_scan", 1000);
+    ros::Publisher pub = n.advertise<rplidar_ros_blocking::new_rplidar>("new_scan", 1000);
     ros::Subscriber sub = n.subscribe<sensor_msgs::LaserScan>("/scan", 1000, scanCallback);
 
     while(ros::ok()){

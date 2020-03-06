@@ -1,7 +1,7 @@
 #include "ros/ros.h"
-#include "rplidar_ros/new_rplidar.h"
+#include "rplidar_ros_blocking/new_rplidar.h"
 
-void msgCallback(const rplidar_ros::new_rplidar::ConstPtr& msg){
+void msgCallback(const rplidar_ros_blocking::new_rplidar::ConstPtr& msg){
     int count = msg->count;
     for(int i=0; i<count; i++)
         ROS_INFO("new info : [%f, %f]", msg->degree[i], msg->distance[i]);

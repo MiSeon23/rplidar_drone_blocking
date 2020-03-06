@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(rplidar_ros)
+project(rplidar_ros_blocking)
 
 set(RPLIDAR_SDK_PATH "./sdk/")
 
@@ -34,7 +34,7 @@ generate_messages(
 )
 
 catkin_package(
-  LIBRARIES rplidar_ros
+  LIBRARIES rplidar_ros_blocking
   #CATKIN_DEPENDS roscpp std_msgs
 )
 
