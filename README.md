@@ -1,9 +1,9 @@
-# rplidar_drone blocking
+# rplidar_ros_blocking
 
 How to build
 ```
 $ cd catkin_ws/src
-$ git clone https://github.com/MiSeon23/rplidar_drone_blocking
+$ git clone https://github.com/MiSeon23/rplidar_ros_blocking
 $ catkin_make
 
 -----
@@ -13,7 +13,7 @@ $ catkin_make
 $ cd catkin_ws
 $ mkdir src_new
 $ cd src_new
-$ git clone https://github.com/MiSeon23/rplidar_drone_blocking
+$ git clone https://github.com/MiSeon23/rplidar_ros_blocking
 $ cd ..
 $ catkin_make --source src_new
 $ cd build
@@ -28,12 +28,12 @@ $ ls -l /dev |grep ttyUSB
 //add the authority of write (such as /dev/ttyUSB0)
 $ sudo chmod 666 /dev/ttyUSB0
 
-$ roslaunch rplidar_ros rplidar.launch (a1)
-$ roslaunch rplidar_ros rplidar_s1.launch (s1)
+$ roslaunch rplidar_ros_blocking rplidar.launch (a1)
+$ roslaunch rplidar_ros_blocking rplidar_s1.launch (s1)
 
-$ rosrun rplidar_ros rplidarNodeClient
+$ rosrun rplidar_ros_blocking rplidarNodeClient
 
-$ rosrun rplidar_ros rplidarNodeSubscriber
+$ rosrun rplidar_ros_blocking rplidarNodeSubscriber
 ```
 
 ##### reference : https://github.com/Slamtec/rplidar_ros
